@@ -18,4 +18,4 @@ Overview:
  Findings: 
  ---
    * Challenge 1: The data files and model code was too large to host on the standard GitHub Repository. 
-      *Soulution 1: We used GitHub LFS to load the large file into our GitHub Repository
+   * Soulution 1: We used GitHub LFS to load the large file into our GitHub Repository
