@@ -14,7 +14,7 @@ K.clear_session()
 model_best = load_model(model_file,compile = False)
 
 # Function for making predictions using the given model
-def predict_class(model, images, show = True):
+def predict_class(model, images, show = False):
   for img in images:
     image_name = img
     img = image.load_img(img, target_size=(299, 299))
@@ -31,15 +31,16 @@ def predict_class(model, images, show = True):
         plt.imshow(img[0])                           
         plt.axis('off')
         plt.show()
+    return pred_value
 
 # Initialize a list of images to classify using the model
 images = []
 
 # To use locally, images used for predicts are stored in img_folder
-img_folder = './img_test/'
-for img in os.listdir(img_folder):
-    images.append(img_folder+img)
+# img_folder = './img_test/'
+# for img in os.listdir(img_folder):
+#     images.append(img_folder+img)
 
 # Calls predict_class on images array
-predict_class(model_best, images, False)
+# predict_class(model_best, images, False)
 
