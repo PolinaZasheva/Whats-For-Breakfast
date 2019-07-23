@@ -25,21 +25,32 @@ Model Outline:
  * For computational efficiency, limited the dataset to 3 classes to develop the multiclass classification model
  * Generated separate data folders for each class
  * Fine tuned Inception Pretrained model 
-    *Use Keras to provide pretrained model* . 
-    *Using the pretrained model, we were able to use the already learned weights and add few layers on top to finetune the model to our new data* . 
-    *This helps in faster convergence and saves time and computation when compared to models trained from scratch* . 
+ * Use Keras to provide pretrained model
+ * Using the pretrained model, we were able to use the already learned weights and add few layers on top to finetune the model to our new data
+ * This helps in faster convergence and saves time and computation when compared to models trained from scratch* . 
  * Visualized the accuracy of the model
  * Predicted classes for new images from internet using the best trained model
  * Set compile=False and clearing the session leads to faster loading of the saved model
-
-
-  
-  
-  
-  
-  
- Findings: 
+ 
+ Deployment: 
+ ---
+ * Created a directory of the model
+ * Created a python script to build and train the model and run that script
+ * Created directory for the Flask App
+ * Copy the pre-trained model to the root of the Flask app
+ * Set up virtual hosting for Flask
+ * Create and HTML script that enables image interaction with model on app
+ 
+ Challenges: 
  ---
    * Challenge: The data files and model code was too large to host on the standard GitHub Repository. 
    * Solution: We used GitHub LFS to load the large file into our GitHub Repository
+   
+ Postmortem Analysis:
+ ---
+ * Currently our model is able to accurately predict the outcome from three classes of food – waffles, omelet, French toast
+ * With more time and more computational power, we would like to add more classes to it and expand it’s usefulness by offering additional detail about each food selection– such as closes location to buy, nutritional fact, etc. 
+ * Currently our model is housed on a traditional website where the user is asked to upload an image in order to receive a response
+ * With more time, we would like to turn this functionality into an application that enables the end user to use the camera on their phone to take a picture of a food and receive a response 
+
  
