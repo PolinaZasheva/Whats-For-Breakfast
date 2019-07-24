@@ -9,7 +9,7 @@ Overview:
  * Download and extract Food 101 dataset
  * Understand dataset structure and files
  * Visualize random image from three of the classes
- * Create a subset of data with few classes(3) – french toast, omelet, waffle
+ * Create a subset of data with few classes(9) – waffles, omelet, French toast, breakfast burrito, donuts, pancakes, deviled eggs, huevos rancheros, “not breakfast food”
  * Train the Model
  * Fine tune Inception Pretrained model
  * Predicting classes for new images from internet
@@ -22,7 +22,7 @@ Model Outline:
  * Split the image data into train and test
  * Prepared “Training” dataset
  * Prepared “Testing” dataset
- * For computational efficiency, limited the dataset to 3 classes to develop the multiclass classification model
+ * For computational efficiency, limited the dataset to 9 classes to develop the multiclass classification model
  * Generated separate data folders for each class
  * Fine tuned Inception Pretrained model 
  * Use Keras to provide pretrained model
@@ -48,7 +48,7 @@ Model Outline:
    
  Postmortem Analysis:
  ---
- * Currently our model is able to accurately predict the outcome from three classes of food – waffles, omelet, French toast
+ * Currently our model is able to accurately predict the outcome from nine classes of food – waffles, omelet, French toast, breakfast burrito, donuts, pancakes, deviled eggs, huevos rancheros, “not breakfast food”
  * With more time and more computational power, we would like to add more classes to it and expand it’s usefulness by offering additional detail about each food selection– such as closes location to buy, nutritional fact, etc. 
  * Currently our model is housed on a traditional website where the user is asked to upload an image in order to receive a response
  * With more time, we would like to turn this functionality into an application that enables the end user to use the camera on their phone to take a picture of a food and receive a response 
