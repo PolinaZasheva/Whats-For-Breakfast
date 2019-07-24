@@ -44,7 +44,7 @@ def hello_world():
         # Save the file to ./uploads
         basepath = os.path.dirname(__file__)
         image = os.path.join(
-            basepath, 'uploads', secure_filename(f.filename))
+            basepath, 'static/uploads', secure_filename(f.filename))
         f.save(image)
 
         # Make prediction
