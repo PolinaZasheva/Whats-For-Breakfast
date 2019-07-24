@@ -13,9 +13,9 @@ from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__)
 
-model_file = 'best_model_3class.hdf5'
+model_file = 'best_model_3class_new.hdf5'
 print(model_file)
-food_list = ['french toast','omelette','waffle']
+food_list = ['Not_Breakfast','breakfast_burrito','deviled_eggs','donuts','french_toast','huevos_rancheros','omelette','pancakes','waffles']
 
 # Load model to make predictions
 K.clear_session()
