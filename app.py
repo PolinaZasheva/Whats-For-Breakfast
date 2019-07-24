@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 model_file = 'best_model_3class_new.hdf5'
 print(model_file)
-food_list = ['Not_Breakfast','breakfast_burrito','deviled_eggs','donuts','french_toast','huevos_rancheros','omelette','pancakes','waffles']
+food_list = ['Not Breakfast','breakfast burrito','deviled eggs','donuts','french toast','huevos rancheros','omelette','pancakes','waffles']
 
 # Load model to make predictions
 K.clear_session()
@@ -58,7 +58,8 @@ def hello_world():
         breakfast_name = pred_value
         # image = resizer(images=image)
         # print(resizer(images=image))
-        return render_template('result.html', breakfast=breakfast_name)
+        prediction_value = str(round((100*(preds[0,index])),2))
+        return render_template('result.html', breakfast=breakfast_name, confidence=prediction_value, image=image)
 
 if __name__ == '__main__':
     # app.run(debug=True)
