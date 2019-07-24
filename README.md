@@ -46,7 +46,7 @@ Model Outline:
    * Challenge: The data files and model code was too large to host on the standard GitHub Repository. 
    * Solution: We used GitHub LFS to load the large file into our GitHub Repository
    
- Postmortem Analysis:
+Future Works:
  ---
  * Currently our model is able to accurately predict the outcome from nine classes of food – waffles, omelet, French toast, breakfast burrito, donuts, pancakes, deviled eggs, huevos rancheros, “not breakfast food”
  * With more time and more computational power, we would like to add more classes to it and expand it’s usefulness by offering additional detail about each food selection– such as closes location to buy, nutritional fact, etc. 
